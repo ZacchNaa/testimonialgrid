@@ -1,0 +1,98 @@
+@font-face {
+  font-family: "Barlow Semi Condensed";
+  font-style: normal;
+  font-weight: 500;
+  src: url("https://fonts.google.com/specimen/Barlow+Semi+Condensed"); /* IE9 Compat Modes */
+}
+
+body {
+  font-size: 13px;
+}
+
+.grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    "content1   content1    sidebar1    sidebar2"
+    "sidebar3   content2    content2    sidebar2";
+}
+
+img {
+  border-radius: 100%;
+  margin-right: 20px;
+  width: 70px;
+  height: 70px;
+}
+
+.item1 {
+  grid-area: content1;
+  background-color: hsl(263, 55%, 52%);
+  border-radius: 8px;
+  padding: 20px;
+  color: hsl(0, 0%, 100%);
+}
+
+.user {
+  display: flex;
+  flex-direction: row;
+}
+
+.item2 {
+  grid-area: sidebar1;
+  background-color: hsl(217, 19%, 35%);
+  border-radius: 8px;
+  padding: 20px;
+  color: hsl(0, 0%, 100%);
+}
+
+.item3 {
+  grid-area: sidebar2;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 8px;
+  box-shadow: 0 0.4rem 0.4rem 0 hsl(0, 0%, 81%);
+  padding: 20px;
+}
+
+.item4 {
+  grid-area: sidebar3;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 8px;
+  box-shadow: 0 0.4rem 0.4rem 0 hsl(0, 0%, 81%);
+  padding: 20px;
+}
+
+.item5 {
+  grid-area: content2;
+  background-color: hsl(219, 29%, 14%);
+  border-radius: 8px;
+  padding: 20px;
+  color: hsl(0, 0%, 100%);
+}
+@media screen and (min-width: 1440px) {
+  .grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+      "content1   content1    sidebar1    sidebar2"
+      "sidebar3   content2    content2    sidebar2";
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+      "content1   content1    content1    content1"
+      "sidebar1   sidebar1    sidebar1    sidebar1"
+      "sidebar2   sidebar2    sidebar2    sidebar2"
+      "sidebar3   sidebar3    sidebar3    sidebar3"
+      "content2   content2    content2    content2";
+  }
+}
